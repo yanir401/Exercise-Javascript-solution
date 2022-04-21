@@ -1,0 +1,20 @@
+const myCountry = {
+  country: "Spain",
+  capital: "Madrid",
+  language: "Spanish",
+  population: 47.35,
+  neighbors: ["Portugal", "Andorra", "France"],
+  describe() {
+    console.log(
+      `${this.country} has ${this.population} million people, their mother tongue is ${this.language}, they have ${this.neighbors.length} neighboring countries and a capital called ${this.capital}.`
+    );
+  },
+  checkIsland() {
+    this.neighbors.length === 0
+      ? (this.isIsland = true)
+      : (this.isIsland = false);
+  },
+};
+myCountry.describe();
+myCountry.checkIsland();
+console.log(myCountry);
